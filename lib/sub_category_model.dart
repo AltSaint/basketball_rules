@@ -32,22 +32,6 @@ List<SubCategory> gamePositionsSubcategories = [
     text:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor',
   ),
-  SubCategory(
-
-    title: 'Игрок в процессе броска ',
-    text:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor',
-  ),
-  SubCategory(
-    title: 'Заброшенный мяч: Когда заброшен и его цена',
-    text:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor',
-  ),
-  SubCategory(
-    title: 'Чек',
-    text:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor',
-  ),
 ];
 
 List<SubCategory> violationsSubcategories = [

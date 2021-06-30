@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:floating_bottom_navigation_bar/floating_bottom_navigation_bar.dart';
 import '../main_categories_list_widget.dart';
 
-
 class MainScreen extends StatefulWidget {
   const MainScreen({Key? key}) : super(key: key);
 
@@ -32,12 +31,21 @@ class _MainScreenState extends State<MainScreen> {
         appBar: AppBar(
           title: Text('Basketball Rules'),
         ),
-        body: IndexedStack(
-          index: _selectedTab,
+        body: Stack(
           children: [
-            Text('Поиск'),
-            MainCategoriesListWidget(),
-            Text('настройки'),
+            Center(
+              child: Image(
+                image: AssetImage('images/dunker.png'),
+              ),
+            ),
+            IndexedStack(
+              index: _selectedTab,
+              children: [
+                Text('Поиск'),
+                MainCategoriesListWidget(),
+                Text('настройки'),
+              ],
+            ),
           ],
         ),
         bottomNavigationBar: FloatingNavbar(

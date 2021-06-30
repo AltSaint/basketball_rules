@@ -1,7 +1,7 @@
-import 'package:basketball_rules/main_category_model.dart';
 import 'package:basketball_rules/sub_categories_list_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:basketball_rules/screens/main_screen.dart';
+import 'package:basketball_rules/screens/info_screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -24,14 +24,8 @@ class MyApp extends StatelessWidget {
       ),
       routes: {
         '/main_screen': (context) => MainScreen(),
-        '/main_screen/main_to_sub': (context) {
-          final arguments = ModalRoute.of(context)?.settings.arguments;
-          if (arguments is MainCategory) {
-            return SubCategoriesListWidget(mainCategory: arguments);
-          } else {
-            return Text('bruh...');
-          }
-        }
+        '/main_screen/main_to_sub': (context) => SubCategoriesListWidget(),
+        '/main_screen/main_to_sub/info': (context) => InfoScreen(),
       },
       initialRoute: '/main_screen',
     );
